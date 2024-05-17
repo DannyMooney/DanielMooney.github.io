@@ -1,152 +1,203 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Daniel Mooney's CV</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
-</style>
+    <title>Daniel Mooney's CV</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        html, body, h1, h2, h3, h4, h5, h6 {
+            font-family: "Roboto", sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -15px;
+        }
+
+        .col-third {
+            flex: 0 0 33.333%;
+            max-width: 33.333%;
+            padding: 15px;
+        }
+
+        .col-two-third {
+            flex: 0 0 66.666%;
+            max-width: 66.666%;
+            padding: 15px;
+        }
+
+        .card {
+            background-color: #fff;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .card h2 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: #444;
+        }
+
+        .skills, .languages {
+            margin-bottom: 20px;
+        }
+
+        .skills p, .languages p {
+            margin: 5px 0;
+        }
+
+        .progress {
+            background-color: #f4f4f4;
+            border-radius: 13px;
+            padding: 3px;
+            margin-bottom: 10px;
+        }
+
+        .progress div {
+            background-color: #4caf50;
+            width: 0;
+            height: 18px;
+            border-radius: 9px;
+            text-align: center;
+            color: white;
+            font-size: 14px;
+            line-height: 18px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #4caf50;
+            color: #fff;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .col-third, .col-two-third {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+    </style>
 </head>
-<body class="w3-light-grey">
-
-<!-- Page Container -->
-<div class="w3-content w3-margin-top" style="max-width:1400px;">
-
-  <!-- The Grid -->
-  <div class="w3-row-padding">
-  
-    <!-- Left Column -->
-    <div class="w3-third">
-    
-      <div class="w3-white w3-text-grey w3-card-4">
-        <div class="w3-display-container">
-          <div class="w3-display-bottomleft w3-container w3-text-black">
-            <h2>Daniel Mooney</h2>
-          </div>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-third">
+                <div class="card">
+                    <div class="profile-img">
+                        <img src="https://via.placeholder.com/400" style="width:100%" alt="Avatar">
+                        <h2>Daniel Mooney</h2>
+                    </div>
+                    <hr>
+                    <div class="skills">
+                        <h3>Skills</h3>
+                        <p>Software Development</p>
+                        <div class="progress"><div style="width:90%">90%</div></div>
+                        <p>Java</p>
+                        <div class="progress"><div style="width:85%">85%</div></div>
+                        <p>HTML5, CSS</p>
+                        <div class="progress"><div style="width:80%">80%</div></div>
+                        <p>Python, TensorFlow</p>
+                        <div class="progress"><div style="width:75%">75%</div></div>
+                        <p>Machine Learning</p>
+                        <div class="progress"><div style="width:70%">70%</div></div>
+                        <p>R</p>
+                        <div class="progress"><div style="width:65%">65%</div></div>
+                        <p>Mobile Applications</p>
+                        <div class="progress"><div style="width:60%">60%</div></div>
+                    </div>
+                    <div class="languages">
+                        <h3>Languages</h3>
+                        <p>English</p>
+                        <div class="progress"><div style="width:100%">100%</div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-two-third">
+                <div class="card">
+                    <h2>Work Experience</h2>
+                    <div>
+                        <h3>Software Support Intern - Precia Molen Irl Ltd</h3>
+                        <p><i class="fa fa-calendar fa-fw"></i> March 2023 - August 2023</p>
+                        <p>Provided technical support to users facing software-related issues via phone and email.</p>
+                        <p>Collaborated closely with the development team to identify and communicate software bugs.</p>
+                        <p>Developed a programme to help testing products.</p>
+                    </div>
+                    <hr>
+                    <div>
+                        <h3>McDonalds Crew Member - McDonald's</h3>
+                        <p><i class="fa fa-calendar fa-fw"></i> October 2021 - February 2022</p>
+                        <p>Kitchen porter, Batch work, Grill work, Machine filter.</p>
+                    </div>
+                    <hr>
+                    <div>
+                        <h3>Apprentice - Monneys Air-Conditioning</h3>
+                        <p><i class="fa fa-calendar fa-fw"></i> January 2018 - May 2020</p>
+                        <p>Worked alongside other staff members.</p>
+                        <p>Installed air conditioning units.</p>
+                    </div>
+                    <hr>
+                    <div>
+                        <h3>Store Assistant - Fabulous Hampers</h3>
+                        <p><i class="fa fa-calendar fa-fw"></i> 2016 - 2017</p>
+                        <p>Dealt with customers.</p>
+                        <p>Worked on the register.</p>
+                        <p>Was given a key to open and close the shop when necessary.</p>
+                    </div>
+                    <hr>
+                    <div>
+                        <h3>Waiter/Bartender - Freils</h3>
+                        <p><i class="fa fa-calendar fa-fw"></i> January 2015 - December 2016</p>
+                        <p>Worked with other employees.</p>
+                        <p>Took customers' orders.</p>
+                        <p>Worked on tills.</p>
+                        <p>Worked as a kitchen porter also.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h2>Education</h2>
+                    <div>
+                        <h3>Advanced/Higher Certificate in Software Development</h3>
+                        <p><i class="fa fa-calendar fa-fw"></i> September 2020 - Present</p>
+                        <p>Institute of Technology Carlow</p>
+                    </div>
+                    <hr>
+                    <div>
+                        <h3>Advanced/Higher Certificate in Computer Science</h3>
+                        <p><i class="fa fa-calendar fa-fw"></i> October 2019 - April 2020</p>
+                        <p>ST. Conleth's Community College</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="w3-container">
-          <hr>
-
-          <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Skills</b></p>
-          <p>Software Development</p>
-          <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:90%">90%</div>
-          </div>
-          <p>Java</p>
-          <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:85%">85%</div>
-          </div>
-          <p>HTML5, CSS</p>
-          <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:80%">80%</div>
-          </div>
-          <p>Python, TensorFlow</p>
-          <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:75%">75%</div>
-          </div>
-          <p>Machine Learning</p>
-          <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:70%">70%</div>
-          </div>
-          <p>R</p>
-          <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:65%">65%</div>
-          </div>
-          <p>Mobile Applications</p>
-          <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:60%">60%</div>
-          </div>
-          <br>
-
-          <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Languages</b></p>
-          <p>English</p>
-          <div class="w3-light-grey w3-round-xlarge">
-            <div class="w3-round-xlarge w3-teal" style="height:24px;width:100%"></div>
-          </div>
-          <br>
-        </div>
-      </div><br>
-
-    <!-- End Left Column -->
     </div>
 
-    <!-- Right Column -->
-    <div class="w3-twothird">
-    
-      <div class="w3-container w3-card w3-white w3-margin-bottom">
-        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Work Experience</h2>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>Software Support Intern - Precia Molen Irl Ltd</b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>March 2023 - August 2023</h6>
-          <p>Provided technical support to users facing software-related issues via phone and email.<br>
-             Collaborated closely with the development team to identify and communicate software bugs.<br>
-             Developed a programme to help testing products.</p>
-          <hr>
-        </div>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>McDonalds Crew Member - McDonald's</b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>October 2021 - February 2022</h6>
-          <p>Kitchen porter, Batch work, Grill work, Machine filter.</p>
-          <hr>
-        </div>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>Apprentice - Monneys Air-Conditioning</b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>January 2018 - May 2020</h6>
-          <p>Worked alongside other staff members.<br>
-             Installed air conditioning units.</p>
-          <hr>
-        </div>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>Store Assistant - Fabulous Hampers</b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2016 - 2017</h6>
-          <p>Dealt with customers.<br>
-             Worked on the register.<br>
-             Was given a key to open and close the shop when necessary.</p>
-          <hr>
-        </div>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>Waiter/Bartender - Freils</b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>January 2015 - December 2016</h6>
-          <p>Worked with other employees.<br>
-             Took customers' orders.<br>
-             Worked on tills.<br>
-             Worked as a kitchen porter also.</p>
-          <br>
-        </div>
-      </div>
-
-      <div class="w3-container w3-card w3-white">
-        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Education</h2>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>Advanced/Higher Certificate in Software Development</b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>September 2020 - Present</h6>
-          <p>Institute of Technology Carlow</p>
-          <hr>
-        </div>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>Advanced/Higher Certificate in Computer Science</b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>October 2019 - April 2020</h6>
-          <p>ST. Conleth's Community College</p>
-          <br>
-        </div>
-      </div>
-
-    <!-- End Right Column -->
-    </div>
-    
-  <!-- End Grid -->
-  </div>
-  
-  <!-- End Page Container -->
-</div>
-
-<footer class="w3-container w3-teal w3-center w3-margin-top">
-  <p>Create by Daniel Mooney</p>
-</footer>
-
+    <footer>
+        <p>Created by Daniel Mooney</p>
+    </footer>
 </body>
 </html>
