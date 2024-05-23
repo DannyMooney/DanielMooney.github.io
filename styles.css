@@ -3,17 +3,17 @@ html, body, h1, h2, h3, h4, h5, h6 {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    color: #333; /* Consistent text color */
+    color: #333;
 }
 
 body {
     background-color: #f4f4f4;
-    font-size: 16px; /* Improve readability */
+    font-size: 16px;
 }
 
 .container {
     max-width: 1200px;
-    margin: 20px auto;
+    margin: auto;
     padding: 20px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -24,16 +24,10 @@ body {
 .profile-section {
     display: flex;
     align-items: center;
+    justify-content: center; /* Center align the profile */
     padding: 20px 0;
     border-bottom: 2px solid #eaeaea;
-}
-
-.profile-img img {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    margin-right: 20px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center; /* Center the text */
 }
 
 .profile-info h1 {
@@ -42,103 +36,27 @@ body {
     color: #333;
 }
 
-.profile-info p {
-    margin: 5px 0;
-    color: #666;
-}
-
-.profile-info .profile-summary {
-    margin-top: 15px;
-    font-size: 1.1em;
-    color: #444;
-}
-
-/* Grid layout */
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 -15px;
-}
-
-.col-third, .col-two-third {
-    padding: 15px;
-}
-
-.col-third {
-    flex: 0 0 33.333%;
-    max-width: 33.333%;
-}
-
-.col-two-third {
-    flex: 0 0 66.666%;
-    max-width: 66.666%;
-}
-
-/* Card styles */
-.card {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    margin-bottom: 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-}
-
-.card h2 {
-    margin-top: 0;
-    color: #333;
-    border-bottom: 2px solid #eaeaea;
-    padding-bottom: 10px;
-}
-
-.card h3 {
-    margin-top: 0;
-    color: #444;
-}
-
-.card .date {
-    font-size: 0.9em;
-    color: #999;
-}
-
-.skill, .education, .project {
-    margin-bottom: 20px;
-}
-
-.skill p, .education p, .project p {
-    margin: 5px 0;
-}
-
-.progress {
-    background-color: #eaeaea;
-    border-radius: 13px;
-    padding: 3px;
-    margin-bottom: 10px;
-}
-
-.progress div {
-    background-color: #4caf50;
-    height: 18px;
-    border-radius: 9px;
-    text-align: center;
+/* Navigation styles */
+nav {
+    background-color: #333;
     color: white;
-    font-size: 14px;
-    line-height: 18px;
-    animation: progress-animation 2s ease-in-out forwards;
+    padding: 10px 0;
+    text-align: center;
 }
 
-@keyframes progress-animation {
-    from {
-        width: 0;
-    }
-    to {
-        width: inherit;
-    }
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
 }
 
 /* Footer styles */
@@ -147,23 +65,19 @@ footer {
     padding: 20px;
     background-color: #4caf50;
     color: #fff;
-    margin-top: 20px;
-    border-radius: 0 0 8px 8px;
+    position: absolute;
+    width: 100%; /* Make footer full width */
+    bottom: 0;
+    left: 0;
 }
 
-/* Responsive styles */
 @media (max-width: 768px) {
     .profile-section {
         flex-direction: column;
-        text-align: center;
     }
 
-    .profile-img img {
-        margin: 0 auto 20px;
-    }
-
-    .col-third, .col-two-third {
-        flex: 0 0 100%;
-        max-width: 100%;
+    nav ul li {
+        display: block;
+        margin-top: 10px;
     }
 }
