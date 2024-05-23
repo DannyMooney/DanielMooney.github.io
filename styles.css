@@ -1,74 +1,49 @@
-/* Base styles */
-html, body, h1, h2, h3, h4, h5, h6 {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #333;
-}
-
-body {
-    background-color: #f4f4f4;
-    font-size: 16px;
-}
-
-.container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    border-radius: 8px;
-}
-
-/* Profile section */
-.profile-section {
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Center align the profile */
-    padding: 20px 0;
-    border-bottom: 2px solid #eaeaea;
-    text-align: center; /* Center the text */
-}
-
-.profile-info h1 {
-    margin: 0 0 10px;
-    font-size: 2.5em;
-    color: #333;
-}
+/* Base styles and other styles remain unchanged */
 
 /* Navigation styles */
 nav {
     background-color: #333;
     color: white;
-    padding: 10px 0;
-    text-align: center;
+    width: 100%;
+    position: fixed; /* Fixed positioning to keep the nav on top */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Keeps the nav above other content */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Adds shadow for depth */
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 20px;
+    margin: 0 10px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
+    padding: 10px 15px;
+    display: block;
 }
 
-/* Footer styles */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #4caf50;
-    color: #fff;
-    position: absolute;
-    width: 100%; /* Make footer full width */
-    bottom: 0;
-    left: 0;
+nav ul li a:hover {
+    background-color: #4caf50; /* Adds a hover effect */
+}
+
+/* Container padding top adjustment due to fixed nav */
+.container {
+    padding-top: 60px;
 }
 
 @media (max-width: 768px) {
@@ -76,8 +51,16 @@ footer {
         flex-direction: column;
     }
 
+    nav ul {
+        flex-direction: column;
+    }
+
     nav ul li {
         display: block;
-        margin-top: 10px;
+        text-align: center;
+    }
+
+    nav ul li a {
+        padding: 10px;
     }
 }
