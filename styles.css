@@ -1,4 +1,60 @@
-/* Base styles and other styles remain unchanged */
+/* Base styles */
+html, body, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+body {
+    background-color: #f4f4f4;
+    font-size: 16px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    padding-top: 60px; /* Adjust for fixed nav */
+}
+
+/* Profile section */
+.profile-section {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center align the profile */
+    padding: 20px 0;
+    border-bottom: 2px solid #eaeaea;
+    text-align: center; /* Center the text */
+}
+
+.profile-img img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-right: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.profile-info h1 {
+    margin: 0 0 10px;
+    font-size: 2.5em;
+    color: #333;
+}
+
+.profile-info p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.profile-info .profile-summary {
+    margin-top: 15px;
+    font-size: 1.1em;
+    color: #444;
+}
 
 /* Navigation styles */
 nav {
@@ -41,9 +97,84 @@ nav ul li a:hover {
     background-color: #4caf50; /* Adds a hover effect */
 }
 
-/* Container padding top adjustment due to fixed nav */
-.container {
-    padding-top: 60px;
+/* Grid layout */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.col-third, .col-two-third {
+    padding: 15px;
+}
+
+.col-third {
+    flex: 0 0 33.333%;
+    max-width: 33.333%;
+}
+
+.col-two-third {
+    flex: 0 0 66.666%;
+    max-width: 66.666%;
+}
+
+/* Card styles */
+.card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.card h2 {
+    margin-top: 0;
+    color: #333;
+    border-bottom: 2px solid #eaeaea;
+    padding-bottom: 10px;
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #444;
+}
+
+.card .date {
+    font-size: 0.9em;
+    color: #999;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #4caf50;
+    color: #fff;
+    position: absolute;
+    width: 100%; /* Make footer full width */
+    bottom: 0;
+    left: 0;
+}
+
+.contact-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.contact-button:hover {
+    background-color: #555; /* Darker shade on hover for visual feedback */
 }
 
 @media (max-width: 768px) {
@@ -62,5 +193,9 @@ nav ul li a:hover {
 
     nav ul li a {
         padding: 10px;
+    }
+
+    footer {
+        position: static; /* Avoid positioning issues on small screens */
     }
 }
