@@ -1,37 +1,38 @@
 /* Base styles */
 html, body, h1, h2, h3, h4, h5, h6 {
-    font-family: "Roboto", sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
+    color: #333;
 }
 
 body {
     background-color: #f4f4f4;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .container {
     max-width: 1200px;
-    margin: 20px auto;
+    margin: auto;
     padding: 20px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     border-radius: 8px;
+    padding-top: 60px; /* Adjust for fixed nav */
+    flex: 1;
 }
 
 /* Profile section */
 .profile-section {
     display: flex;
     align-items: center;
+    justify-content: center; /* Center align the profile */
     padding: 20px 0;
     border-bottom: 2px solid #eaeaea;
-}
-
-.profile-img img {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    margin-right: 20px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center; /* Center the text */
 }
 
 .profile-info h1 {
@@ -49,6 +50,47 @@ body {
     margin-top: 15px;
     font-size: 1.1em;
     color: #444;
+}
+
+/* Navigation styles */
+nav {
+    background-color: #333;
+    color: white;
+    width: 100%;
+    position: fixed; /* Fixed positioning to keep the nav on top */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Keeps the nav above other content */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Adds shadow for depth */
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: #4caf50; /* Adds a hover effect */
 }
 
 /* Grid layout */
@@ -104,39 +146,30 @@ body {
     color: #999;
 }
 
-.skill, .education {
-    margin-bottom: 20px;
-}
-
-.skill p, .education p {
-    margin: 5px 0;
-}
-
-.progress {
-    background-color: #eaeaea;
-    border-radius: 13px;
-    padding: 3px;
+/* Skill bars */
+.skill {
     margin-bottom: 10px;
 }
 
-.progress div {
-    background-color: #4caf50;
-    height: 18px;
-    border-radius: 9px;
-    text-align: center;
-    color: white;
-    font-size: 14px;
-    line-height: 18px;
-    animation: progress-animation 2s ease-in-out forwards;
+.skill p {
+    margin: 0;
 }
 
-@keyframes progress-animation {
-    from {
-        width: 0;
-    }
-    to {
-        width: inherit;
-    }
+.progress {
+    background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 20px;
+    margin-top: 5px;
+}
+
+.progress div {
+    height: 100%;
+    background-color: #4caf50;
+    text-align: right;
+    line-height: 20px; /* Centers text vertically */
+    color: white;
+    padding-right: 5px;
 }
 
 /* Footer styles */
@@ -145,23 +178,47 @@ footer {
     padding: 20px;
     background-color: #4caf50;
     color: #fff;
-    margin-top: 20px;
-    border-radius: 0 0 8px 8px;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
+.contact-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.contact-button:hover {
+    background-color: #555; /* Darker shade on hover for visual feedback */
 }
 
 /* Responsive styles */
 @media (max-width: 768px) {
-    .col-third, .col-two-third {
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
-
     .profile-section {
         flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        display: block;
         text-align: center;
     }
 
-    .profile-img img {
-        margin: 0 0 20px 0;
+    nav ul li a {
+        padding: 10px;
+    }
+
+    .col-third, .col-two-third {
+        flex: 0 0 100%;
+        max-width: 100%;
     }
 }
