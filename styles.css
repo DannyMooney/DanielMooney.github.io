@@ -31,14 +31,6 @@ body {
     text-align: center; /* Center the text */
 }
 
-.profile-img img {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    margin-right: 20px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
 .profile-info h1 {
     margin: 0 0 10px;
     font-size: 2.5em;
@@ -150,14 +142,40 @@ nav ul li a:hover {
     color: #999;
 }
 
+/* Skill bars */
+.skill {
+    margin-bottom: 10px;
+}
+
+.skill p {
+    margin: 0;
+}
+
+.progress {
+    background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 20px;
+    margin-top: 5px;
+}
+
+.progress div {
+    height: 100%;
+    background-color: #4caf50;
+    text-align: right;
+    line-height: 20px; /* Centers text vertically */
+    color: white;
+    padding-right: 5px;
+}
+
 /* Footer styles */
 footer {
     text-align: center;
     padding: 20px;
     background-color: #4caf50;
     color: #fff;
-    position: absolute;
-    width: 100%; /* Make footer full width */
+    width: 100%;
+    position: absolute; /* Fixed positioning to keep the footer at the bottom */
     bottom: 0;
     left: 0;
 }
@@ -177,6 +195,7 @@ footer {
     background-color: #555; /* Darker shade on hover for visual feedback */
 }
 
+/* Responsive styles */
 @media (max-width: 768px) {
     .profile-section {
         flex-direction: column;
@@ -197,5 +216,10 @@ footer {
 
     footer {
         position: static; /* Avoid positioning issues on small screens */
+    }
+
+    .col-third, .col-two-third {
+        flex: 0 0 100%;
+        max-width: 100%;
     }
 }
